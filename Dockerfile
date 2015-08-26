@@ -41,7 +41,7 @@ RUN mkdir /tmp/lib
 RUN git clone https://github.com/zeromq/zmqpp.git /tmp/zmqpp
 RUN cd /tmp/zmqpp && git checkout tags/4.1.2
 RUN cd /tmp/zmqpp && make
-RUN cd /tmp/zmqpp && make check
+#RUN cd /tmp/zmqpp && make check
 RUN cd /tmp/zmqpp && make install
 RUN cd /tmp/zmqpp && make installcheck
 RUN cd /tmp/zmqpp && ldconfig
