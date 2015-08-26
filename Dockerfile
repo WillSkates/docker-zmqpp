@@ -38,13 +38,13 @@ RUN cd /tmp/czmq && ldconfig
 
 RUN mkdir /tmp/lib
 
-RUN git clone https://github.com/zeromq/zmqpp.git /tmp/lib/zmqpp
-RUN cd /tmp/lib/zmqpp && git checkout tags/4.1.2
-RUN cd /tmp/lib/zmqpp && make
-RUN cd /tmp/lib/zmqpp && make check
-RUN cd /tmp/lib/zmqpp && make install
-RUN cd /tmp/lib/zmqpp && make installcheck
-RUN cd /tmp/lib/zmqpp && ldconfig
+RUN git clone https://github.com/zeromq/zmqpp.git /tmp/zmqpp
+RUN cd /tmp/zmqpp && git checkout tags/4.1.2
+RUN cd /tmp/zmqpp && make
+RUN cd /tmp/zmqpp && make check
+RUN cd /tmp/zmqpp && make install
+RUN cd /tmp/zmqpp && make installcheck
+RUN cd /tmp/zmqpp && ldconfig
 
 RUN git clone https://github.com/zeromq/cppzmq.git /tmp/lib/cppzmq
 
